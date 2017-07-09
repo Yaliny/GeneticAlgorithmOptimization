@@ -1,0 +1,118 @@
+﻿<Window x:Class="PredictiveAnalyticsModule.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PredictiveAnalyticsModule"
+        mc:Ignorable="d"
+        Title="Genetic Algorithm Optimization" Height="443" Width="790.75">
+    <Window.Resources>
+        <local:BoolArrayConverter x:Key="boolArrayConverter"/>
+    </Window.Resources>
+    <Grid Background="#FF373440">
+        <Grid Margin="0,10,0,10" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition/>
+                <RowDefinition Height="10"/>
+            </Grid.RowDefinitions>
+            <Border Grid.ColumnSpan="5" Background="#FF373440" BorderBrush="Coral" BorderThickness="0,0,0,2"/>
+            <Label Content="Genetic Algorithm Optimization" FontSize="14" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="5"/>
+            <Border Grid.Row="2" Grid.Column="1" Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1"/>
+            <Grid Grid.Row="2" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="0.9*"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="5"/>
+                </Grid.RowDefinitions>
+                <Label Grid.ColumnSpan="3" Content="Queue model settings" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Grid.Row="1" Text="Number of clients:" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="2" Text="Average request frequency:" HorizontalAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="3" Text="Mean service time:" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <ComboBox Name="comboBoxClientNumber" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,5,10,5" SelectedIndex="0">
+                    <ComboBoxItem Content="1"/>
+                    <ComboBoxItem Content="2"/>
+                    <ComboBoxItem Content="3"/>
+                    <ComboBoxItem Content="4"/>
+                    <ComboBoxItem Content="5"/>
+                    <ComboBoxItem Content="6"/>
+                    <ComboBoxItem Content="7"/>
+                    <ComboBoxItem Content="8"/>
+                    <ComboBoxItem Content="9"/>
+                    <ComboBoxItem Content="10"/>
+                    <ComboBoxItem Content="11"/>
+                    <ComboBoxItem Content="12"/>
+                    <ComboBoxItem Content="13"/>
+                    <ComboBoxItem Content="14"/>
+                    <ComboBoxItem Content="15"/>
+                    <ComboBoxItem Content="16"/>
+                    <ComboBoxItem Content="17"/>
+                    <ComboBoxItem Content="18"/>
+                    <ComboBoxItem Content="19"/>
+                    <ComboBoxItem Content="20"/>
+                    <ComboBoxItem Content="21"/>
+                    <ComboBoxItem Content="22"/>
+                    <ComboBoxItem Content="23"/>
+                    <ComboBoxItem Content="24"/>
+                    <ComboBoxItem Content="25"/>
+                    <ComboBoxItem Content="26"/>
+                    <ComboBoxItem Content="27"/>
+                    <ComboBoxItem Content="28"/>
+                    <ComboBoxItem Content="29"/>
+                    <ComboBoxItem Content="30"/>
+                </ComboBox>
+                <TextBox Name="txtBoxInputFlow" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Margin="0,5,0,5" Text="12"/>
+                <TextBox Name="txtBoxServiceTime" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3" Margin="0,5,0,5" Text="1,889"/>
+                <TextBlock TextWrapping="Wrap" Text="req /sec" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="2" Margin="0,5,0,5"/>
+                <TextBlock TextWrapping="Wrap" Text="sec" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="3" Margin="0,5,0,5"/>
+                <Button Name="buttonStart" Content="Simulate evolution" Grid.Row="4" Grid.ColumnSpan="3" Margin="10,5" Click="buttonStart_Click"/>
+                <Button Name="buttonNewSimulation" Content="New simulation" Grid.Row="4" Grid.ColumnSpan="3" Visibility="Hidden" Margin="10,5" Click="buttonNewSimulation_Click"/>
+                <Button Name="buttonStep" Content="Next generation" Grid.Row="4" Grid.ColumnSpan="3" Margin="10,5" Visibility="Hidden" Click="buttonStep_Click"/>
+                <Button Name="buttonFinal" Content="Final result" Grid.Row="5" Grid.ColumnSpan="3" Margin="10,5" Visibility="Hidden" Click="buttonFinal_Click"/>
+                
+            </Grid>
+            <Grid Grid.Column="3" Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <DataGrid Name="output" Grid.Row="2" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="№" Width="Auto" Binding="{Binding Path=index}"/>
+                        <DataGridTextColumn Header="Genotype" Width="Auto" Binding="{Binding Path=genotype, Converter={StaticResource boolArrayConverter}}"/>
+                        <DataGridTextColumn Header="S (Transact.)" Width="Auto" Binding="{Binding Path=S}"/>
+                        <DataGridTextColumn Header="K (Connect.)" Width="Auto" Binding="{Binding Path=K}"/>
+                        <DataGridTextColumn Header="Pk" Width="Auto" Binding="{Binding Path=Pk}"/>
+                        <DataGridTextColumn Header="Ws" Width="Auto" Binding="{Binding Path=Ws}"/>
+                        <DataGridTextColumn Header="Mark" Width="Auto" Binding="{Binding Path=ranking}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Label Content="Output" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Border Grid.Row="4" BorderBrush="Gainsboro" BorderThickness="1"/>
+                <ScrollViewer Grid.Row="4">
+                    <TextBlock Name="txtBlockResult" TextWrapping="Wrap"/>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

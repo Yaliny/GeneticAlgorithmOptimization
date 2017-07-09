@@ -1,0 +1,15 @@
+c:\users\sunfl\documents\visual studio 2015\Projects\PredictiveAnalyticsModule\PredictiveAnalyticsModule\bin\Debug\PredictiveAnalyticsModule.exe.config
+C:\Users\sunfl\documents\visual studio 2015\Projects\PredictiveAnalyticsModule\PredictiveAnalyticsModule\bin\Debug\PredictiveAnalyticsModule.exe
+C:\Users\sunfl\documents\visual studio 2015\Projects\PredictiveAnalyticsModule\PredictiveAnalyticsModule\bin\Debug\PredictiveAnalyticsModule.pdb
+C:\Users\sunfl\documents\visual studio 2015\Projects\PredictiveAnalyticsModule\PredictiveAnalyticsModule\obj\Debug\PredictiveAnalyticsModule.csprojResolveAssemblyReference.cache
+C:\Users\sunfl\documents\visual studio 2015\Projects\PredictiveAnalyticsModule\PredictiveAnalyticsModule\obj\Debug\MainWindow.g.cs
+C:\Users\sunfl\documents\visual studio 2015\Projects\PredictiveAnalyticsModule\PredictiveAnalyticsModule\obj\Debug\App.g.cs
+C:\Users\sunfl\documents\visual studio 2015\Projects\PredictiveAnalyticsModule\PredictiveAnalyticsModule\obj\Debug\PredictiveAnalyticsModule_MarkupCompile.cache
+C:\Users\sunfl\documents\visual studio 2015\Projects\PredictiveAnalyticsModule\PredictiveAnalyticsModule\obj\Debug\PredictiveAnalyticsModule_MarkupCompile.lref
+C:\Users\sunfl\documents\visual studio 2015\Projects\PredictiveAnalyticsModule\PredictiveAnalyticsModule\obj\Debug\MainWindow.baml
+C:\Users\sunfl\documents\visual studio 2015\Projects\PredictiveAnalyticsModule\PredictiveAnalyticsModule\obj\Debug\PredictiveAnalyticsModule.g.resources
+C:\Users\sunfl\documents\visual studio 2015\Projects\PredictiveAnalyticsModule\PredictiveAnalyticsModule\obj\Debug\PredictiveAnalyticsModule.Properties.Resources.resources
+C:\Users\sunfl\documents\visual studio 2015\Projects\PredictiveAnalyticsModule\PredictiveAnalyticsModule\obj\Debug\PredictiveAnalyticsModule.csproj.GenerateResource.Cache
+C:\Users\sunfl\documents\visual studio 2015\Projects\PredictiveAnalyticsModule\PredictiveAnalyticsModule\obj\Debug\PredictiveAnalyticsModule.exe
+C:\Users\sunfl\documents\visual studio 2015\Projects\PredictiveAnalyticsModule\PredictiveAnalyticsModule\obj\Debug\PredictiveAnalyticsModule.pdb
+C:\Users\sunfl\documents\visual studio 2015\Projects\PredictiveAnalyticsModule\PredictiveAnalyticsModule\obj\Debug\GeneratedInternalTypeHelper.g.cs
